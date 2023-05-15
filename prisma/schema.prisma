@@ -12,6 +12,8 @@ model Book {
   title       String  @db.VarChar(120)
   description String?
   bar_code    String  @unique @db.VarChar(50)
+  created_at  DateTime @default(now())
+  updated_at  DateTime @default(now())
 
   @@map("books")
 }
